@@ -18,7 +18,7 @@ Este projeto foi desenvolvido completamente usando [Godot Engine 4.2.2](https://
 No [projeto original](https://github.com/digitalinnovationone/trilha-godot), as ovelhas são inimigos. Achei esteticamente desagradável tratar coisinhas tão fofas como algo ruim no jogo, mas também não queria descartar estes animais dóceis. Então modifiquei a mecânica do jogo para que o *player* tivesse que, além de se manter vivo, proteger o máximo de ovelhas possível. Neste protótipo, coloquei apenas quatro ovelhas no início do jogo (futuras versões poderão ter quantidades maiores). Além disso, estipulei que a missão deveria ter um limite de tempo, pois é quase impossível manter as ovelhas vivas em um intervalo de tempo indefinido. Na configuração padrão, o tempo máximo de uma rodada é de 1 minuto.
 
 
-Como trabalho futuro, em rodadas subsequentes, o *player* player terá mais dificultades (inimigos mais poderosos, missões mais longas, e assim por diante), contudo, também terá mais poderes.
+Como trabalho futuro, em rodadas subsequentes, o *player* terá mais dificuldades (inimigos mais poderosos, missões mais longas, e assim por diante), contudo, também terá mais poderes.
 
 # Experimente agora mesmo.
 
