@@ -22,7 +22,7 @@ Como trabalho futuro, em rodadas subsequentes, o *player* player terá mais difi
 
 # Experimente agora mesmo.
 
-Jogue nosso protótipo [aqui](https://gilzamir18.itch.io/sheep-defender)
+Jogue nosso protótipo agora mesmo [aqui](https://gilzamir18.itch.io/sheep-defender).
 
 ![](doc/sample.gif)
 
