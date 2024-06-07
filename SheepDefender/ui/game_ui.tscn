@@ -1,0 +1,118 @@
+[gd_scene load_steps=9 format=3 uid="uid://p2jrl6airai4"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_1p4ad"]
+[ext_resource type="Texture2D" uid="uid://crgb2cxs2uche" path="res://addons/TinySwords/UI/Banners/Banner_Horizontal.png" id="1_5alby"]
+[ext_resource type="Texture2D" uid="uid://b2twry0illrem" path="res://addons/TinySwords/Resources/Resources/M_Idle_(NoShadow).png" id="3_lc6ak"]
+[ext_resource type="Texture2D" uid="uid://bbcifbv6u12fa" path="res://addons/TinySwords/Resources/Sheep/sheep.png" id="4_favey"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mmjxi"]
+texture = ExtResource("1_5alby")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="SystemFont" id="SystemFont_pfg3u"]
+font_names = PackedStringArray("", "Liberation Mono")
+font_weight = 999
+subpixel_positioning = 0
+
+[sub_resource type="LabelSettings" id="LabelSettings_wp5wj"]
+font = SubResource("SystemFont_pfg3u")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6d45q"]
+atlas = ExtResource("3_lc6ak")
+region = Rect2(32, 40, 72, 64)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_1p4ad")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -77.0
+offset_top = 50.0
+offset_right = 103.0
+offset_bottom = 89.0
+grow_horizontal = 2
+text = "08:50"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel2" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -197.0
+offset_bottom = 98.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mmjxi")
+
+[node name="MeatLabel" type="Label" parent="Panel2"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -34.0
+offset_right = 134.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "50
+"
+label_settings = SubResource("LabelSettings_wp5wj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel2"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = -18.0
+offset_right = 104.0
+offset_bottom = 68.0
+texture = SubResource("AtlasTexture_6d45q")
+
+[node name="Panel3" type="Panel" parent="."]
+offset_right = 197.0
+offset_bottom = 98.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mmjxi")
+
+[node name="SheepLabel" type="Label" parent="Panel3"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 5.5
+offset_top = -37.0
+offset_right = 70.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "5
+"
+label_settings = SubResource("LabelSettings_wp5wj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel3"]
+clip_contents = true
+layout_mode = 0
+offset_left = 22.0
+offset_top = 5.0
+offset_right = 109.0
+offset_bottom = 63.0
+texture = ExtResource("4_favey")

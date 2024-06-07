@@ -1,0 +1,106 @@
+[gd_scene load_steps=16 format=3 uid="uid://cpq44fu7diray"]
+
+[ext_resource type="Script" path="res://animals/farm_animal.gd" id="1_pbp0m"]
+[ext_resource type="PackedScene" uid="uid://baecp3e03shrb" path="res://misc/skul.tscn" id="2_xnhym"]
+[ext_resource type="Texture2D" uid="uid://dyfsdgnd8rpla" path="res://addons/TinySwords/Resources/Sheep/HappySheep_Bouncing.png" id="3_0paij"]
+[ext_resource type="Script" path="res://animals/behaviors/animal_random_walk.gd" id="4_fedri"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjw7j"]
+radius = 28.0
+height = 58.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pylfk"]
+atlas = ExtResource("3_0paij")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jb8u"]
+atlas = ExtResource("3_0paij")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r631i"]
+atlas = ExtResource("3_0paij")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkla2"]
+atlas = ExtResource("3_0paij")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5m5rc"]
+atlas = ExtResource("3_0paij")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dlj7"]
+atlas = ExtResource("3_0paij")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_socyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pylfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jb8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r631i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkla2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5m5rc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dlj7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jgs5r"]
+bg_color = Color(0, 0, 0, 0.556863)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uf7ki"]
+bg_color = Color(1, 0, 0.0156863, 0.772549)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gniuu"]
+radius = 49.0408
+
+[node name="Sheep" type="CharacterBody2D" groups=["farm_animal"]]
+script = ExtResource("1_pbp0m")
+death_prefab = ExtResource("2_xnhym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -22)
+shape = SubResource("CapsuleShape2D_pjw7j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2, -17)
+scale = Vector2(1, 1.16667)
+sprite_frames = SubResource("SpriteFrames_socyk")
+autoplay = "default"
+frame_progress = 0.856707
+
+[node name="RandomWalk" type="Node" parent="."]
+script = ExtResource("4_fedri")
+
+[node name="DamageDigitMarker" type="Marker2D" parent="."]
+position = Vector2(1, -49)
+
+[node name="HealthProgressBar" type="ProgressBar" parent="."]
+offset_left = -30.0
+offset_top = 14.0
+offset_right = 32.0
+offset_bottom = 25.0
+theme_override_styles/background = SubResource("StyleBoxFlat_jgs5r")
+theme_override_styles/fill = SubResource("StyleBoxFlat_uf7ki")
+show_percentage = false
+
+[node name="DamageArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+modulate = Color(0.531664, 0.00024383, 0.544949, 0.529412)
+position = Vector2(0, -22)
+shape = SubResource("CircleShape2D_gniuu")

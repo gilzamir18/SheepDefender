@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1436e2ofpc47"]
+
+[ext_resource type="PackedScene" uid="uid://c64hpoaxvjs1h" path="res://player/player.tscn" id="1_4rbjs"]
+[ext_resource type="PackedScene" uid="uid://clf4icdfxr3pr" path="res://enemies/pawn.tscn" id="2_geiu4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_4rbjs")]
+position = Vector2(413, 492)
+scale = Vector2(0.4, 0.4)
+motion_mode = 1
+
+[node name="Pawn" parent="." instance=ExtResource("2_geiu4")]
+position = Vector2(632, 512)

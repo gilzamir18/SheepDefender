@@ -1,0 +1,123 @@
+[gd_scene load_steps=27 format=3 uid="uid://cccuvupu6tec6"]
+
+[ext_resource type="Script" path="res://enemies/enemy.gd" id="1_16k1y"]
+[ext_resource type="PackedScene" uid="uid://baecp3e03shrb" path="res://misc/skul.tscn" id="2_efjlf"]
+[ext_resource type="PackedScene" uid="uid://d3b1b1amk0ycu" path="res://misc/meat.tscn" id="3_upypc"]
+[ext_resource type="Texture2D" uid="uid://bfodrnruximqj" path="res://addons/enemy/diablo/1/1_enemies_1_walk_000.png" id="4_4pmt2"]
+[ext_resource type="Texture2D" uid="uid://ds4eii0b4k4yq" path="res://addons/enemy/diablo/1/1_enemies_1_walk_001.png" id="5_u2fhi"]
+[ext_resource type="Texture2D" uid="uid://0grrvfemfnjt" path="res://addons/enemy/diablo/1/1_enemies_1_walk_002.png" id="6_4d4gg"]
+[ext_resource type="Texture2D" uid="uid://bqcu8et078prp" path="res://addons/enemy/diablo/1/1_enemies_1_walk_003.png" id="7_1gl6t"]
+[ext_resource type="Texture2D" uid="uid://besoii6hcxiao" path="res://addons/enemy/diablo/1/1_enemies_1_walk_004.png" id="8_pidbq"]
+[ext_resource type="Texture2D" uid="uid://d2ovrceacvug4" path="res://addons/enemy/diablo/1/1_enemies_1_walk_005.png" id="9_v0add"]
+[ext_resource type="Texture2D" uid="uid://bw3uqynvtuv5s" path="res://addons/enemy/diablo/1/1_enemies_1_walk_006.png" id="10_0hikv"]
+[ext_resource type="Texture2D" uid="uid://bhgqts0ct7aca" path="res://addons/enemy/diablo/1/1_enemies_1_walk_007.png" id="11_k2hl6"]
+[ext_resource type="Texture2D" uid="uid://dbbxdomtu2xh6" path="res://addons/enemy/diablo/1/1_enemies_1_walk_008.png" id="12_eqic5"]
+[ext_resource type="Texture2D" uid="uid://dmen71b5kpqfg" path="res://addons/enemy/diablo/1/1_enemies_1_walk_009.png" id="13_iynxv"]
+[ext_resource type="Texture2D" uid="uid://bdgvxccp7nmtw" path="res://addons/enemy/diablo/1/1_enemies_1_walk_010.png" id="14_v46ey"]
+[ext_resource type="Texture2D" uid="uid://b31h2dlwy8ul7" path="res://addons/enemy/diablo/1/1_enemies_1_walk_011.png" id="15_od7v3"]
+[ext_resource type="Texture2D" uid="uid://bcqbtre5dpe7t" path="res://addons/enemy/diablo/1/1_enemies_1_walk_012.png" id="16_54ufs"]
+[ext_resource type="Texture2D" uid="uid://b5og4l1qo0smh" path="res://addons/enemy/diablo/1/1_enemies_1_walk_013.png" id="17_hsnic"]
+[ext_resource type="Texture2D" uid="uid://bqqi6gbn0fj8" path="res://addons/enemy/diablo/1/1_enemies_1_walk_014.png" id="18_wolcg"]
+[ext_resource type="Texture2D" uid="uid://c5ff53c6pe141" path="res://addons/enemy/diablo/1/1_enemies_1_walk_015.png" id="19_d68gy"]
+[ext_resource type="Texture2D" uid="uid://dtcst6mnm0uip" path="res://addons/enemy/diablo/1/1_enemies_1_walk_016.png" id="20_yjhlw"]
+[ext_resource type="Texture2D" uid="uid://ddy4cqq0gw0g5" path="res://addons/enemy/diablo/1/1_enemies_1_walk_017.png" id="21_q8cke"]
+[ext_resource type="Texture2D" uid="uid://d3sqd1an3rxgi" path="res://addons/enemy/diablo/1/1_enemies_1_walk_018.png" id="22_ea3tf"]
+[ext_resource type="Texture2D" uid="uid://pb0t101oai10" path="res://addons/enemy/diablo/1/1_enemies_1_walk_019.png" id="23_4mnr2"]
+[ext_resource type="Script" path="res://enemies/behaviors/follow.gd" id="24_u7vvn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pjw7j"]
+radius = 28.0
+height = 58.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_socyk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4pmt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_u2fhi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4d4gg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_1gl6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pidbq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_v0add")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0hikv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_k2hl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_eqic5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_iynxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v46ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_od7v3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_54ufs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_hsnic")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_wolcg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_d68gy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yjhlw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q8cke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ea3tf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4mnr2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Diablo" type="CharacterBody2D" groups=["enemies"]]
+script = ExtResource("1_16k1y")
+health = 3
+death_prefab = ExtResource("2_efjlf")
+drop_chance = 0.2
+drop_items = Array[PackedScene]([ExtResource("3_upypc")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -22)
+shape = SubResource("CapsuleShape2D_pjw7j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(13.25, -39)
+scale = Vector2(0.508503, 0.436364)
+sprite_frames = SubResource("SpriteFrames_socyk")
+autoplay = "default"
+frame_progress = 0.856707
+
+[node name="Follow" type="Node" parent="."]
+script = ExtResource("24_u7vvn")
+speed = 1.2
+
+[node name="DamageDigitMarker" type="Marker2D" parent="."]
+position = Vector2(1, -49)
