@@ -1,11 +1,11 @@
 [gd_scene load_steps=13 format=3 uid="uid://dovxmyi7jr1p6"]
 
-[ext_resource type="Texture2D" uid="uid://ip5kgybcq6x" path="res://addons/TinySwords/UI/Ribbons/Ribbon_Red_3Slides.png" id="1_1r17j"]
-[ext_resource type="Script" path="res://ui/game_end.gd" id="1_c20pr"]
-[ext_resource type="Texture2D" uid="uid://crgb2cxs2uche" path="res://addons/TinySwords/UI/Banners/Banner_Horizontal.png" id="2_8wpbg"]
+[ext_resource type="Script" path="res://ui/game_end.gd" id="1_dyskq"]
+[ext_resource type="Texture2D" uid="uid://ip5kgybcq6x" path="res://addons/TinySwords/UI/Ribbons/Ribbon_Red_3Slides.png" id="2_j6xrs"]
+[ext_resource type="Texture2D" uid="uid://crgb2cxs2uche" path="res://addons/TinySwords/UI/Banners/Banner_Horizontal.png" id="3_gyls2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_18pn4"]
-texture = ExtResource("1_1r17j")
+texture = ExtResource("2_j6xrs")
 texture_margin_left = 64.0
 texture_margin_right = 64.0
 axis_stretch_horizontal = 2
@@ -20,7 +20,7 @@ font_size = 32
 font_color = Color(0, 0, 0, 0.74902)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnhbo"]
-texture = ExtResource("2_8wpbg")
+texture = ExtResource("3_gyls2")
 texture_margin_left = 32.0
 texture_margin_top = 16.0
 texture_margin_right = 32.0
@@ -62,7 +62,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(189, -169)]
+"values": [Vector2(298.5, -161)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -74,7 +74,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(285, 659)]
+"values": [Vector2(266, 672)]
 }
 
 [sub_resource type="Animation" id="Animation_k5tvv"]
@@ -102,7 +102,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.450625, 1),
 "update": 0,
-"values": [Vector2(317, -166), Vector2(317, 23)]
+"values": [Vector2(298.5, -174), Vector2(298.5, 30)]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
@@ -114,7 +114,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.7, 2),
 "transitions": PackedFloat32Array(1, 0.435276, 1),
 "update": 0,
-"values": [Vector2(298, 697), Vector2(298, 672), Vector2(298, 448)]
+"values": [Vector2(266, 689), Vector2(266, 668), Vector2(266, 423)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ckd0d"]
@@ -124,7 +124,7 @@ _data = {
 }
 
 [node name="GameOverUI" type="CanvasLayer"]
-script = ExtResource("1_c20pr")
+script = ExtResource("1_dyskq")
 
 [node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -138,11 +138,12 @@ color = Color(0, 0, 0, 0.521569)
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 189.0
-offset_top = -169.0
-offset_right = 744.0
-offset_bottom = -16.0
+offset_left = 298.5
+offset_top = -161.0
+offset_right = 853.5
+offset_bottom = -8.0
 grow_horizontal = 2
+size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxTexture_18pn4")
 
 [node name="Label" type="Label" parent="TopPanel"]
@@ -162,16 +163,20 @@ text = "Game Over"
 label_settings = SubResource("LabelSettings_41od8")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 1
 
 [node name="BottomPanel" type="Panel" parent="."]
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-offset_left = 285.0
-offset_top = 659.0
-offset_right = 905.0
-offset_bottom = 851.0
+anchor_bottom = 1.0
+offset_left = 266.0
+offset_top = 672.0
+offset_right = 886.0
+offset_bottom = 864.0
 grow_horizontal = 2
+grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxTexture_nnhbo")
 
 [node name="CenterContainer" type="CenterContainer" parent="BottomPanel"]

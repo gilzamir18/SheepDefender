@@ -191,6 +191,7 @@ debug_color = Color(1, 0.578614, 0.442218, 0.42)
 
 [node name="Player" parent="." instance=ExtResource("1_qjuil")]
 position = Vector2(519, 303)
+ritual_interval = 30.0
 
 [node name="RemoteTransform2D-Camera" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")

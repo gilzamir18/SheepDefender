@@ -13,7 +13,8 @@ func trigger_player_won():
 		game_ui = null
 		
 	#criar gameoverui
-	var player_won_ui: GameOverUI = preload("res://ui/player_won_ui.tscn").instantiate()
+	var player_won_ui: GameOverUI = preload("res://ui/game_end_ui.tscn").instantiate()
+	player_won_ui.player_won = true
 	add_child(player_won_ui)
 
 func trigger_game_over():
@@ -23,5 +24,6 @@ func trigger_game_over():
 		game_ui = null
 		
 	#criar gameoverui
-	var game_over_ui: GameOverUI = preload("res://ui/game_over_ui.tscn").instantiate()
+	var game_over_ui: GameOverUI = preload("res://ui/game_end_ui.tscn").instantiate()
+	game_over_ui.player_won = false
 	add_child(game_over_ui)

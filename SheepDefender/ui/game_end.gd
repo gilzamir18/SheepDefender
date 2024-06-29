@@ -8,17 +8,18 @@ extends CanvasLayer
 @export var restart_delay = 5.0
 
 var restart_cooldown: float
+var player_won = true
 
 func _ready():
 	time_label.text = GameManager.time_elapsed_string
 	monsters_label.text = str(GameManager.monsters_defeated_counter)
 	sheeps_label.text = str(GameManager.animals_defeated_by_enemies)
 	
-	if name == "PlayerWonUI":
+	if player_won:
 		if GameManager.animals_defeated_by_enemies <= 2:
 			$TopPanel/Label.text = "Congratulations, you did well!"
 		else:
-			$TopPanel/Label.text = "You are alive, but you need to improve."
+			$TopPanel/Label.text = "You are alive, improve next."
 	else:
 		$TopPanel/Label.text = "GameOver"
 	restart_cooldown = restart_delay
